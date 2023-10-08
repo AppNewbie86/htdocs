@@ -1,0 +1,72 @@
+/* Allgemeine Stile für die Seite */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile für den Header */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile für den Hauptabschnitt */
+main {
+    padding: 20px;
+}
+
+/* Stile für Kontaktinformationen */
+section:nth-child(odd) {
+    background-color: #222;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #E0FF00;
+    margin-top: 0;
+}
+
+address p {
+    margin: 10px 0;
+}
+
+/* Stile für das Kontaktformular */
+section:nth-child(even) {
+    background-color: #444;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    color: #E0FF00;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+form input[type="submit"] {
+    background-color: #E0FF00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

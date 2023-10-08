@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Webseite</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap-Verknüpfungen, wie bereits in Ihrem Code -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Stil für Produktkarten und Header */
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card h3 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+    }
+
+    .product-card p {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+    }
+
+    /* Horizontale Anordnung des Footers */
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .newsletter button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Stil für Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .logo {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .search-bar input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .login-form {
+      display: flex;
+      align-items: center;
+    }
+
+    .login-form span {
+      margin-right: 10px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <img src="Assets/logo.jpg" alt="logo" class="logo">
+  </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Suchen">
+  </div>
+  <div class="login-form">
+    <span>Login:</span>
+    <input type="text" placeholder="Benutzername">
+    <span>Password:</span>
+    <input type="password" placeholder="Passwort">
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">ÜBER UNS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">KURSE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">BUCHUNGEN</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">MEIN LERNCONTENT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">FAVORITEN</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container shop-container">
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <h2>Kategorien</h2>
+      <ul>
+        <li><a href="#">KURSE</a></li>
+        <li><a href="#">FORUM</a></li>
+        <li><a href="#">NOTIZEN</a></li>
+        <li><a href="#">MITTEILUNGEN</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9 main-content">
+      <h1>Willkommen auf unserer Online-Plattform für Programmierer oder Grafikdesigner!</h1>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="Assets/bild1.png" alt="solar">
+          <h3>WEB DEVELOPER KURS</h3>
+          <p>Preis: $13.99 qm</p>
+          <button class="btn btn-primary">KURS BESUCHEN</button>
+        </div>
+        <div class="product-card">
+          <img src="Assets/bild2.png" alt="coder">
+          <h3>CODER KURS</h3>
+          <p>Preis: $18.99 qm</p>
+          <button class="btn btn-primary">KURS BESUCHEN</button>
+        </div>
+        <div class="product-card">
+          <img src="Assets/bild3.png" alt="designer">
+          <h3>DESIGNER MASTER KURS</h3>
+          <p>Preis: $74.99 qm</p>
+          <button class="btn btn-primary">KURS BESUCHEN</button>
+        </div>
+        <!-- Weitere Produktkarten hier einfügen -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="newsletter">
+      <h4>Newsletter anmelden & Vorteile sichern</h4>
+      <input type="email" placeholder="Deine E-Mail-Adresse">
+      <button class="btn btn-primary">Anmelden</button>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Über uns</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">AGB</a></li>
+        <li><a href="#">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-ads">
+    <div class="ad">
+      <img src="ad1.jpg" alt="Werbung 1" width="100" height="100">
+    </div>
+    <div class="ad">
+      <img src="ad2.jpg" alt="Werbung 2" width="100" height="100">
+    </div>
+  </div>
+  <p>© 2023 Meine Webseite. Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>
