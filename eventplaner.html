@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminplaner - Meine Webseite</title>
+    <!-- Verknüpfung zur externen CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap-Verknüpfungen für das Design -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Header-Bereich mit Logo -->
+<header>
+    <div>
+        <img src="Assets/logo.jpg" alt="logo" class="logo">
+    </div>
+</header>
+
+<!-- Leichtes Grau für den Bereich unter dem Header -->
+<div class="header-background">
+    <div class="container forum-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Terminplaner</h1>
+                <!-- Tabelle für Termine -->
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Titel</th>
+                        <th scope="col">Datum</th>
+                        <th scope="col">Uhrzeit</th>
+                        <th scope="col">Aktionen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Beispiel-Termin -->
+                    <tr id="termin-1">
+                        <td>Meeting</td>
+                        <td>2023-10-15</td>
+                        <td>10:00 - 11:30</td>
+                        <td><a href="#" class="btn btn-danger">Löschen</a></td>
+                    </tr>
+                    <!-- Weitere Termine hier einfügen -->
+                    </tbody>
+                </table>
+                <!-- Formular zum Erstellen eines neuen Termins -->
+                <h2>Neuen Termin erstellen</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="terminTitel">Titel:</label>
+                        <input type="text" class="form-control" id="terminTitel" placeholder="Geben Sie den Titel ein">
+                    </div>
+                    <div class="form-group">
+                        <label for="terminDatum">Datum:</label>
+                        <input type="date" class="form-control" id="terminDatum">
+                    </div>
+                    <div class="form-group">
+                        <label for="terminUhrzeit">Uhrzeit (von-bis):</label>
+                        <input type="text" class="form-control" id="terminUhrzeit" placeholder="z.B. 10:00 - 11:30">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Termin erstellen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

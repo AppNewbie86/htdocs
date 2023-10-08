@@ -3,26 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Verknüpfung zur externen CSS-Datei -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap-Verknüpfungen für das Design -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <title>Datenschutz - Coders' Hub</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #f5f5f5; /* Leichtes Grau als Hintergrund */
+      color: #000; /* Schriftfarbe Schwarz */
       margin: 0;
       padding: 0;
     }
 
     header {
       background-color: #333;
-      color: #fff;
-      padding: 20px;
+      color: #000; /* Schriftfarbe Schwarz */
+      padding: 10px; /* Kleinerer Header */
       text-align: center;
     }
 
     h1, h2, h3, h4, h5, h6 {
-      color: rgba(224, 255, 0, 1); /* Titel in gewünschter Farbe */
-      text-align: center; /* Titel zentrieren */
+      color: #000; /* Schriftfarbe Schwarz */
+      text-align: center;
     }
 
     .container {
@@ -34,15 +41,27 @@
     }
 
     .logo {
-      width: 280px;
-      height: 120px;
-      margin: 0 auto 20px; /* Zentriert das Logo horizontal und fügt Abstand hinzu */
+      width: 200px; /* Schmäleres Logo */
+      height: auto;
+      margin: 0 auto 20px;
       display: block;
     }
 
     .privacy-policy {
-      text-align: left; /* Linksbündig ausrichten */
+      text-align: left;
       margin-bottom: 20px;
+    }
+
+    /* Hinzugefügter CSS-Stil für Datenschutzerklärungslinks */
+    .privacy-policy h2 {
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* Dunklere Trennlinie */
+      padding-bottom: 5px;
+    }
+
+    /* Hinzugefügtes CSS für aktiven Datenschutzerklärungslink */
+    .privacy-policy h2.active {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5); /* Dunklere aktive Trennlinie */
     }
   </style>
 </head>
@@ -53,18 +72,52 @@
 </header>
 <div class="container">
   <div class="privacy-policy">
-    <h2>Datenschutzerklärung 1</h2>
-    <p>Dies ist die Datenschutzerklärung 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero vitae eros volutpat ultricies.</p>
+    <h2 class="active" data-policy="policy-1">Datenschutzerklärung 1</h2>
+    <p id="policy-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis metus eget velit fermentum vehicula. Ut efficitur, tortor a imperdiet volutpat, purus est vehicula nisl, nec laoreet lectus urna vel ligula. Curabitur hendrerit lectus vel nisl venenatis, sed tincidunt lectus pellentesque. Integer sit amet tincidunt nisl. Nullam rhoncus dignissim velit, non pharetra nisl feugiat non. Duis eu sapien a purus vestibulum iaculis eget at arcu. Integer suscipit, dolor vel sodales mattis, justo lorem ultricies velit, non sollicitudin arcu erat ut ipsum. Vivamus blandit suscipit lorem, nec hendrerit odio venenatis sit amet. Sed bibendum erat at elit fermentum, at tempor elit aliquam. Nulla facilisi.</p>
 
-    <h2>Datenschutzerklärung 2</h2>
-    <p>Dies ist die Datenschutzerklärung 2. Integer consectetur dolor a sem congue fermentum. Duis dignissim lacus sit amet quam rhoncus varius.</p>
+    <h2 data-policy="policy-2">Datenschutzerklärung 2</h2>
+    <p id="policy-2">Vestibulum vel ligula id mi malesuada suscipit. Fusce facilisis vel massa eget facilisis. Nam auctor a libero sed tristique. Sed semper vestibulum vestibulum. Duis auctor, sem a bibendum varius, tortor justo convallis enim, nec consequat purus dui nec justo. Integer at lorem sit amet massa malesuada efficitur in ac justo. Etiam volutpat congue fermentum. Etiam a libero leo. Curabitur tristique eleifend quam, eget dictum nulla volutpat vel. Vivamus efficitur euismod ante, sed varius neque luctus et. Nullam porttitor enim nec ex efficitur interdum. Vivamus laoreet libero in diam lacinia, nec hendrerit justo venenatis. Vestibulum scelerisque libero eu neque venenatis vestibulum.</p>
 
-    <h2>Datenschutzerklärung 3</h2>
-    <p>Dies ist die Datenschutzerklärung 3. Curabitur eu massa vel urna vehicula egestas. Nam tristique nisl et metus luctus, vel venenatis libero venenatis.</p>
+    <h2 data-policy="policy-3">Datenschutzerklärung 3</h2>
+    <p id="policy-3">Pellentesque vehicula justo sit amet orci blandit, non fermentum tortor viverra. Donec eu purus varius, bibendum eros vel, auctor ante. Praesent sed metus eget urna feugiat suscipit in sed justo. Vestibulum venenatis bibendum eros, non volutpat elit volutpat in. Morbi eget metus vel elit euismod tristique. Nulla rhoncus sit amet augue a convallis. Aliquam erat volutpat. Sed euismod scelerisque ipsum eu imperdiet. Nullam eu libero vel tortor laoreet scelerisque. Aenean varius malesuada odio, nec tincidunt urna efficitur sit amet.</p>
 
-    <h2>Datenschutzerklärung 4</h2>
-    <p>Dies ist die Datenschutzerklärung 4. Proin non consequat turpis. Vestibulum quis enim eget dolor hendrerit tincidunt a eu ex.</p>
+    <h2 data-policy="policy-4">Datenschutzerklärung 4</h2>
+    <p id="policy-4">Proin in purus a lorem laoreet vulputate ut eget sapien. Nam non risus nec erat tincidunt volutpat a a leo. Donec sit amet purus ex. Sed laoreet tortor eget massa ullamcorper lacinia. Quisque varius tellus id arcu iaculis auctor. Fusce nec sodales leo. Etiam nec ex vel urna venenatis gravida vel ut est. Vivamus eget elit justo. Etiam malesuada semper quam. Cras venenatis orci sit amet sem vestibulum, non vulputate dolor auctor. Nulla at libero et sapien hendrerit malesuada nec a justo. Vivamus in risus et dolor fermentum tempus. Sed malesuada, sapien at mattis venenatis, quam erat auctor tortor, in vehicula tortor urna eu purus.</p>
   </div>
+
 </div>
+
+<!-- JavaScript für die Datenschutzerklärungs-Navigation -->
+<script>
+  // Funktion, um Datenschutzerklärungen zu wechseln
+  function changePrivacyPolicy(policyId) {
+    // Deaktiviere alle Datenschutzerklärungslinks
+    document.querySelectorAll('.privacy-policy h2').forEach(function(link) {
+      link.classList.remove('active');
+    });
+
+    // Aktiviere den ausgewählten Datenschutzerklärungslink
+    document.querySelector(`.privacy-policy h2[data-policy="${policyId}"]`).classList.add('active');
+
+    // Verstecke alle Datenschutzerklärungen
+    document.querySelectorAll('.privacy-policy p').forEach(function(policy) {
+      policy.style.display = 'none';
+    });
+
+    // Zeige die ausgewählte Datenschutzerklärung
+    document.getElementById(policyId).style.display = 'block';
+  }
+
+  // Standardmäßig die erste Datenschutzerklärung anzeigen
+  changePrivacyPolicy('policy-1');
+
+  // Eventlistener für Datenschutzerklärungslinks
+  document.querySelectorAll('.privacy-policy h2').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var policyId = this.getAttribute('data-policy');
+      changePrivacyPolicy(policyId);
+    });
+  });
+</script>
 </body>
 </html>

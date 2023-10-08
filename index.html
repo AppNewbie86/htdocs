@@ -143,19 +143,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">ÜBER UNS</a>
+      <a class="nav-link" href="ueberuns.html">ÜBER UNS</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">KURSE</a>
+      <a class="nav-link" href="datenschutz.html">DATENSCHUTZ</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">BUCHUNGEN</a>
+      <a class="nav-link" href="forum.html">FORUM</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">MEIN LERNCONTENT</a>
+      <a class="nav-link" href="lerncontent.html">MEIN LERNCONTENT</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">FAVORITEN</a>
+      <a class="nav-link" href="contact.html">Kontakt</a>
     </li>
   </ul>
 </nav>
@@ -165,33 +165,34 @@
     <div class="col-md-3 sidebar">
       <h2>Kategorien</h2>
       <ul>
-        <li><a href="#">KURSE</a></li>
-        <li><a href="#">FORUM</a></li>
-        <li><a href="#">NOTIZEN</a></li>
+        <li><a href="lerncontent.html">KURSE</a></li>
+        <li><a href="forum.html">FORUM</a></li>
+        <li><a href="eventplaner.html">EVENTPLANER</a></li>
         <li><a href="#">MITTEILUNGEN</a></li>
       </ul>
     </div>
     <div class="col-md-9 main-content">
-      <h1>Willkommen auf unserer Online-Plattform für Programmierer oder Grafikdesigner!</h1>
+      <h1>Willkommen auf unserer E Learning-Plattform für Programmierer und Grafikdesigner!</h1>
       <div class="product-list">
         <div class="product-card">
           <img src="Assets/bild1.png" alt="solar">
           <h3>WEB DEVELOPER KURS</h3>
           <p>Preis: $13.99 qm</p>
-          <button class="btn btn-primary">KURS BESUCHEN</button>
+          <button id="kurs1" class="btn btn-primary">KURS BESUCHEN</button>
         </div>
         <div class="product-card">
           <img src="Assets/bild2.png" alt="coder">
           <h3>CODER KURS</h3>
           <p>Preis: $18.99 qm</p>
-          <button class="btn btn-primary">KURS BESUCHEN</button>
+          <button id="kurs2" class="btn btn-primary">KURS BESUCHEN</button>
         </div>
         <div class="product-card">
           <img src="Assets/bild3.png" alt="designer">
           <h3>DESIGNER MASTER KURS</h3>
           <p>Preis: $74.99 qm</p>
-          <button class="btn btn-primary">KURS BESUCHEN</button>
+          <button id="kurs3" class="btn btn-primary">KURS BESUCHEN</button>
         </div>
+
         <!-- Weitere Produktkarten hier einfügen -->
       </div>
     </div>
@@ -207,10 +208,10 @@
     </div>
     <div class="footer-links">
       <ul>
-        <li><a href="#">Über uns</a></li>
-        <li><a href="#">Kontakt</a></li>
-        <li><a href="#">AGB</a></li>
-        <li><a href="#">Datenschutz</a></li>
+        <li><a href="ueberuns.html">Über uns</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="agb.html">AGB</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
@@ -226,3 +227,23 @@
 </footer>
 </body>
 </html>
+<script>
+  // Diese Funktion wird aufgerufen, wenn auf einen Button geklickt wird
+  function buttonClickHandler(buttonId) {
+    alert(`Button mit ID ${buttonId} wurde geklickt!`);
+  }
+
+  // Event Listener hinzufügen, um auf Klicks der Buttons zu reagieren
+  document.getElementById('kurs1').addEventListener('click', function () {
+    buttonClickHandler('kurs1');
+  });
+
+  document.getElementById('kurs2').addEventListener('click', function () {
+    buttonClickHandler('kurs2');
+  });
+
+  document.getElementById('kurs3').addEventListener('click', function () {
+    buttonClickHandler('kurs3');
+  });
+</script>
+

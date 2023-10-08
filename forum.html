@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum - Meine Webseite</title>
+  <!-- Verknüpfung zur externen CSS-Datei -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap-Verknüpfungen für das Design -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Header-Bereich mit Logo -->
+<header>
+  <div>
+    <img src="Assets/logo.jpg" alt="logo" class="logo">
+  </div>
+</header>
+
+<!-- Leichtes Grau für den Bereich unter dem Header -->
+<div class="header-background">
+  <div class="container forum-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Forum</h1>
+        <!-- Tabelle für Forumseinträge -->
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">Titel</th>
+            <th scope="col">Verfasser</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Beitrag</th>
+            <th scope="col">Kommentare</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- Beispiel-Forumseintrag -->
+          <tr id="eintrag-1">
+            <td>Titel des Beitrags 1</td>
+            <td>Benutzer123</td>
+            <td>10. Oktober 2023</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget velit ac turpis bibendum ultrices.</td>
+            <td><a href="#" class="kommentar-link" data-toggle="modal" data-target="#kommentarModal" data-eintrag-id="eintrag-1">Kommentare (0)</a></td>
+          </tr>
+          <!-- Weitere Forumseinträge hier einfügen -->
+          </tbody>
+        </table>
+        <!-- Formular zum Erstellen eines neuen Themas -->
+        <h2>Neues Thema erstellen</h2>
+        <form>
+          <div class="form-group">
+            <label for="themaTitel">Titel:</label>
+            <input type="text" class="form-control" id="themaTitel" placeholder="Geben Sie den Titel ein">
+          </div>
+          <div class="form-group">
+            <label for="themaBeitrag">Beitrag:</label>
+            <textarea class="form-control" id="themaBeitrag" rows="4" placeholder="Geben Sie Ihren Beitrag ein"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Thema erstellen</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal für Kommentare -->
+<div class="modal fade" id="kommentarModal" tabindex="-1" role="dialog" aria-labelledby="kommentarModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="kommentarModalLabel">Kommentar verfassen</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Formular für Kommentare -->
+        <form>
+          <div class="form-group">
+            <label for="kommentarText">Ihr Kommentar:</label>
+            <textarea class="form-control" id="kommentarText" rows="4" placeholder="Geben Sie Ihren Kommentar ein"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kommentar absenden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script>
+  $(document).ready(function() {
+    // Diese Funktion wird aufgerufen, wenn das Formular zum Erstellen eines Themas abgesendet wird
+    $("form").submit(function(event) {
+      event.preventDefault(); // Verhindert das Neuladen der Seite
+
+      // Holen Sie sich die Werte aus den Eingabefeldern
+      var titel = $("#themaTitel").val();
+      var beitrag = $("#themaBeitrag").val();
+
+      // Erstellen Sie eine eindeutige ID für den neuen Eintrag
+      var eintragId = "eintrag-" + Date.now();
+
+      // Erstellen Sie den neuen Eintrag als HTML
+      var neuerEintrag = `
+      <tr id="${eintragId}">
+        <td>${titel}</td>
+        <td>Ihr Benutzername</td>
+        <td>${new Date().toLocaleDateString()}</td>
+        <td>${beitrag}</td>
+        <td><a href="#" class="kommentar-link" data-toggle="modal" data-target="#kommentarModal" data-eintrag-id="${eintragId}">Kommentare (0)</a></td>
+      </tr>
+    `;
+
+      // Fügen Sie den neuen Eintrag zur Tabelle hinzu
+      $("tbody").append(neuerEintrag);
+
+      // Löschen Sie die Eingabefelder
+      $("#themaTitel").val("");
+      $("#themaBeitrag").val("");
+    });
+
+    // Diese Funktion wird aufgerufen, wenn der Kommentar-Link in einem Eintrag geklickt wird
+    $(".kommentar-link").click(function() {
+      // Holen Sie sich die Eintrag-ID aus dem "data-eintrag-id" Attribut des Links
+      var eintragId = $(this).data("eintrag-id");
+
+      // Aktualisieren Sie das Modal mit der entsprechenden Eintrag-ID
+      $("#kommentarModalLabel").text("Kommentar verfassen für Eintrag: " + eintragId);
+    });
+  });
+</script>

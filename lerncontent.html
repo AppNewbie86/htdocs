@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurse - Meine E-Learning-Plattform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap-Verknüpfungen, wie bereits in Ihrem Code -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Stil für Kurskarten */
+        .course-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .course-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-card h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .course-card p {
+            margin-top: 5px;
+            color: #555;
+        }
+
+        .course-card button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Entfernen des Footers */
+        footer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <img src="Assets/logo.jpg" alt="logo" class="logo">
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="ueberuns.html">ÜBER UNS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="datenschutz.html">DATENSCHUTZ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="forum.html">FORUM</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="lerncontent.html">KURSE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">KONTAKT</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container course-container">
+    <h1>Unsere Kurse</h1>
+    <div class="row">
+        <!-- Beispiel-Kurskarten (Können mehr hinzugefügt werden) -->
+        <div class="col-md-3">
+            <div class="course-card">
+                <img src="Assets/course1.jpg" alt="Kurs 1">
+                <h3>Kurs 1</h3>
+                <p>Preis: $19.99</p>
+                <button class="btn btn-primary">KURS BESUCHEN</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <img src="Assets/course2.jpg" alt="Kurs 2">
+                <h3>Kurs 2</h3>
+                <p>Preis: $24.99</p>
+                <button class="btn btn-primary">KURS BESUCHEN</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <img src="Assets/course3.jpg" alt="Kurs 3">
+                <h3>Kurs 3</h3>
+                <p>Preis: $29.99</p>
+                <button class="btn btn-primary">KURS BESUCHEN</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="course-card">
+                <img src="Assets/course4.jpg" alt="Kurs 4">
+                <h3>Kurs 4</h3>
+                <p>Preis: $34.99</p>
+                <button class="btn btn-primary">KURS BESUCHEN</button>
+            </div>
+        </div>
+        <!-- Weitere Kurskarten hier einfügen -->
+    </div>
+</div>
+
+</body>
+</html>
