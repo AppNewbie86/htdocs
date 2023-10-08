@@ -19,16 +19,12 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
-            max-width: 200px;
         }
 
         .course-card img {
             max-width: 100%;
-            height: auto;
+            max-height: 200px; /* Feste Höhe für das Bild */
         }
 
         .course-card:hover {
@@ -46,14 +42,24 @@
             color: #555;
         }
 
+        /* Ändern der Buttonfarbe auf rgba(219, 225, 32, 1) */
         .course-card button {
             margin-top: 10px;
             padding: 10px 15px;
-            background-color: #007bff;
+            background-color: rgba(219, 225, 32, 1); /* Geänderte Farbe */
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        /* Stil für die Interessen-Antragsbox */
+        .interest-box {
+            border: 2px solid rgba(219, 225, 32, 1); /* Rahmenfarbe wie der Button */
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
         }
 
         /* Entfernen des Footers */
@@ -63,12 +69,14 @@
     </style>
 </head>
 <body>
+<!-- Header -->
 <header>
     <div>
         <img src="Assets/logo.jpg" alt="logo" class="logo">
     </div>
 </header>
 
+<!-- Navigationsleiste -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -89,43 +97,85 @@
     </ul>
 </nav>
 
+<!-- Hauptinhalt -->
 <div class="container course-container">
     <h1>Unsere Kurse</h1>
     <div class="row">
         <!-- Beispiel-Kurskarten (Können mehr hinzugefügt werden) -->
         <div class="col-md-3">
             <div class="course-card">
-                <img src="Assets/course1.jpg" alt="Kurs 1">
-                <h3>Kurs 1</h3>
+                <img src="Assets/html.png" alt="HTML KURS">
+                <h3>HTML CSS KURS</h3>
                 <p>Preis: $19.99</p>
                 <button class="btn btn-primary">KURS BESUCHEN</button>
             </div>
         </div>
+        <!-- Weitere Kurskarten hier einfügen -->
         <div class="col-md-3">
             <div class="course-card">
-                <img src="Assets/course2.jpg" alt="Kurs 2">
-                <h3>Kurs 2</h3>
+                <img src="Assets/php.png" alt="PHP KURS">
+                <h3>PHP KURS</h3>
                 <p>Preis: $24.99</p>
                 <button class="btn btn-primary">KURS BESUCHEN</button>
             </div>
         </div>
         <div class="col-md-3">
             <div class="course-card">
-                <img src="Assets/course3.jpg" alt="Kurs 3">
-                <h3>Kurs 3</h3>
+                <img src="Assets/java.png" alt="JAVA KURS">
+                <h3>JAVA KURS</h3>
                 <p>Preis: $29.99</p>
                 <button class="btn btn-primary">KURS BESUCHEN</button>
             </div>
         </div>
         <div class="col-md-3">
             <div class="course-card">
-                <img src="Assets/course4.jpg" alt="Kurs 4">
-                <h3>Kurs 4</h3>
+                <img src="Assets/android.png" alt="ANDROID KURS">
+                <h3>ANDROID KURS</h3>
                 <p>Preis: $34.99</p>
                 <button class="btn btn-primary">KURS BESUCHEN</button>
             </div>
         </div>
         <!-- Weitere Kurskarten hier einfügen -->
+    </div>
+    <!-- Interessen-Antragsbox -->
+    <div class="interest-box">
+        <h2>Interesse, Ihre Lernvideos beizusteuern?</h2>
+        <p>Füllen Sie das folgende Antragsformular aus:</p>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#interestModal">Antragsformular öffnen</button>
+    </div>
+</div>
+
+<!-- Modal für das Antragsformular -->
+<div class="modal fade" id="interestModal" tabindex="-1" role="dialog" aria-labelledby="interestModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="interestModalLabel">Antragsformular für Lernvideos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Hier das Antragsformular einfügen -->
+                <!-- Beispiel: -->
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ihr Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail-Adresse:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail-Adresse">
+                    </div>
+                    <!-- Weitere Formularfelder hier einfügen -->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                <button type="button" class="btn btn-primary">Absenden</button>
+            </div>
+        </div>
     </div>
 </div>
 
