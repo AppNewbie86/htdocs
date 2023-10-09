@@ -164,6 +164,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav">
         <li class="nav-item">
+            <a class="nav-link" href="index.php">HOME</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="ueberuns.html">ÜBER UNS</a>
         </li>
         <li class="nav-item">
