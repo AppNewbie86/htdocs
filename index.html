@@ -47,6 +47,14 @@
 
     .product-card button {
       margin-top: 10px;
+      background-color: rgba(219, 225, 32, 1); /* Geänderte Farbe */
+    }
+
+    /* Stil für die Support-Karte */
+    .support-card {
+      position: absolute;
+      left: 80px; /* Abstand vom linken Rand */
+      bottom: 20px; /* Abstand vom unteren Rand */
     }
 
     /* Horizontale Anordnung des Footers */
@@ -74,7 +82,7 @@
     .newsletter button {
       margin-left: 10px;
       padding: 10px 20px;
-      background-color: #007bff;
+      background-color: rgba(219, 225, 32, 1); /* Geänderte Farbe */
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -122,6 +130,33 @@
       border: 1px solid #ddd;
       border-radius: 5px;
     }
+
+    /* Stil für die Sidebar */
+    .sidebar {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 20px;
+    }
+
+    /* Schmale Kategorienbox und Textausrichtung */
+    .sidebar h2 {
+      text-align: left;
+      font-size: 1.2rem;
+    }
+
+    .sidebar ul li a {
+      text-align: left;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -143,7 +178,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="ueberuns.html">ÜBER UNS</a>
+      <a class="nav-link" href="index.html">HOME</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="datenschutz.html">DATENSCHUTZ</a>
@@ -155,7 +190,10 @@
       <a class="nav-link" href="lerncontent.html">MEIN LERNCONTENT</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="contact.html">Kontakt</a>
+      <a class="nav-link" href="contact.html">KONTAKT</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="ueberuns.html">ÜBER UNS</a>
     </li>
   </ul>
 </nav>
@@ -192,8 +230,6 @@
           <p>Preis: $74.99 qm</p>
           <button id="kurs3" class="btn btn-primary">KURS BESUCHEN</button>
         </div>
-
-        <!-- Weitere Produktkarten hier einfügen -->
       </div>
     </div>
   </div>
@@ -217,11 +253,12 @@
   </div>
   <div class="footer-ads">
     <div class="ad">
-      <img src="ad1.jpg" alt="Werbung 1" width="100" height="100">
+      <img src="Assets/garanted.png" alt="Garanted" width="100" height="100">
     </div>
-    <div class="ad">
-      <img src="ad2.jpg" alt="Werbung 2" width="100" height="100">
-    </div>
+  </div>
+  <!-- Bild "supportcard" im Footer unten links -->
+  <div class="support-card">
+    <img src="Assets/supportcard.png" alt="Support Card" style="width: 200px; height: 400px;">
   </div>
   <p>© 2023 Meine Webseite. Alle Rechte vorbehalten.</p>
 </footer>
@@ -246,4 +283,3 @@
     buttonClickHandler('kurs3');
   });
 </script>
-

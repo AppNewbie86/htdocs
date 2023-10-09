@@ -1,0 +1,62 @@
+/* style_test.css */
+.card {
+    background-color: white; /* Hintergrundfarbe der Card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+    text-align: center;
+    padding: 20px; /* Innenabstand der Card */
+}
+
+.circle-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertikal zentriert */
+    width: 75%; /* 75% der Bildschirmbreite */
+    margin: 0 auto; /* Zentriert die Card horizontal */
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal zentriert */
+    cursor: pointer; /* Zeiger-Cursor hinzufügen */
+}
+
+.circle-container {
+    text-align: center;
+}
+
+.circle img {
+    width: 100px; /* Breite des Bildes auf 100px setzen */
+    height: 100px; /* Höhe des Bildes auf 100px setzen */
+    border-radius: 50%; /* Runder Kreis */
+    margin-bottom: 10px; /* Abstand zwischen Kreis und Text */
+}
+
+/* Stil für das Overlay */
+.overlay {
+    display: none; /* Anfangs ausgeblendet */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Hintergrundfarbe mit Transparenz */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 24px; /* Hier können Sie die gewünschte Schriftgröße angeben */
+}
+
+.card-text {
+    text-align: center;
+    font-size: 18px;
+}

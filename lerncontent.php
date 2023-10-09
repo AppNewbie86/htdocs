@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurse - Meine E-Learning-Plattform</title>
+    <!-- Stil und Bootstrap-Verknüpfungen, wie bereits in Ihrem Code -->
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap-Verknüpfungen, wie bereits in Ihrem Code -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -91,28 +91,6 @@
             width: 100%; /* Bildgröße anpassen */
         }
 
-        /* Stil für die Pfeil-Steuerung */
-        .carousel-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: gold;
-            cursor: pointer;
-        }
-
-        .carousel-control.prev {
-            left: 10px;
-        }
-
-        .carousel-control.next {
-            right: 10px;
-        }
-
-
-
         /* Stil für Ankündigungsbilder */
         .ankuendigungen {
             text-align: center;
@@ -148,6 +126,7 @@
             transform: translateY(-5px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
         }
+
         /* Stil für die Interessen-Antragsbox */
         .interest-box {
             border: 2px solid rgba(219, 225, 32, 1); /* Rahmenfarbe wie der Button */
@@ -166,6 +145,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         /* Entfernen des Footers */
         footer {
             display: none;
@@ -242,7 +222,6 @@
         <!-- Weitere Kurskarten hier einfügen -->
     </div>
 
-
     <div class="row">
         <!-- Beispiel-Kurskarten (Können mehr hinzugefügt werden) -->
         <div class="col-md-3">
@@ -316,21 +295,21 @@
             <div class="modal-body">
                 <!-- Hier das Antragsformular einfügen -->
                 <!-- Beispiel: -->
-                <form>
+                <form method="POST" action="deine_php_datei.php"> <!-- Ersetze "deine_php_datei.php" durch den Dateinamen deiner PHP-Datei -->
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Ihr Name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ihr Name">
                     </div>
                     <div class="form-group">
                         <label for="email">E-Mail-Adresse:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail-Adresse">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ihre E-Mail-Adresse">
                     </div>
                     <!-- Weitere Formularfelder hier einfügen -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                        <button type="submit" class="btn btn-primary">Absenden</button> <!-- Hinzufügen einer Submit-Schaltfläche -->
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
-                <button type="button" class="btn btn-primary">Absenden</button>
             </div>
         </div>
     </div>
@@ -338,5 +317,3 @@
 
 </body>
 </html>
-
-
